@@ -1,0 +1,15 @@
+@startuml
+actor "Main Function"
+participant calculate
+participant getInput
+
+activate "Main Function"
+"Main Function"->calculate:計算を実行
+activate calculate
+calculate->getInput:入力を取得
+activate getInput
+getInput--> calculate:入力データ
+deactivate getInput
+calculate-->"Main Function":計算結果
+deactivate calculate
+@enduml

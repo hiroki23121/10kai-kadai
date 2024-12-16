@@ -1,0 +1,10 @@
+@startuml
+actor Cline 
+participant WebApp as "server"
+participant AuthSever as "Database"
+
+Cline->WebApp:データ要求
+WebApp->AuthSever:問い合わせ
+AuthSever-->WebApp:結果
+WebApp-->Cline:データ
+@enduml
